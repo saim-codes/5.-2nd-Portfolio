@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: white;
+  scroll-behavior: smooth;
+
+}
+
+:root {
+  --dark: #000;
+  --primary: crimson;
+}
+
+#home{
+  background: url(../img/Amoled-Phone-Wallpaper-003-1080x2340.jpg);
+  background-size: cover;
+  height: 99vh;
+}
+/* nav start */
+
+
+custom scroll bar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::selection {
+  background: rgb(0, 123, 255, 0.3);
+}
+
+.content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.navbar {
+  /* height: 12vh; */
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+  background: rgba(16, 16, 16, 1);
+}
+
+.navbar.sticky {
+  background: rgba(16, 16, 16, 1);
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: var(--primary);
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 1em;
+  font-family: 'Pacifico', cursive;
+}
+
+.navbar .menu-list {
+  display: inline-flex;
+}
+
+.menu-list li {
+  list-style: none;
+}
+
+.menu-list li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu-list li a:hover {
+  color: var(--primary);
+}
+
+
+.icon {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-list .cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+@media (max-width: 1230px) {
+  .content {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .content {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 868px) {
+  body.disabled {
+    overflow: hidden;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .icon.hide {
+    display: none;
+  }
+
+  .navbar .menu-list {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #222;
+    transition: all 0.3s ease;
+  }
+
+  .navbar.show .menu-list {
+    left: 0%;
+  }
+
+  .navbar .menu-list li {
+    margin-top: 45px;
+  }
+
+  .navbar .menu-list li a {
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .navbar.show .menu-list li a {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar .logo a {
+    font-size: 27px;
+  }
+}
+
+/* nav end */
+
+
+/* home section start */
+.home {
+  display: flex;
+  height: 88vh;
+  align-items: center;
+
+}
+
+
+
+.home-heading {
+  font-size: 2.4em;
+  margin-left: 1.6em;
+}
+
+.heading {
+  color: var(--primary);
+}
+
+.btn {
+  height: 6em;
+  margin-left: 3.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn a {
+  color: white;
+  font-weight: 500;
+  border: 2px solid white;
+  padding: 8px;
+  width: 150px;
+  margin-left: -20em;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.btn a:hover {
+  background-color: var(--primary);
+  color: var(--dark);
+  border: 2px solid var(--primary);
+
+
+}
+
+@media (max-width: 390px) {
+  .btn a {
+    margin-left: -8em;
+  }
+}
+
+
+
+@media (max-width: 425px) {
+  .btn a {
+    margin-left: -15em;
+  }
+
+  .home-heading {
+    font-size: 1.8em;
+    padding-right: 10px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 393px) {
+  .btn a {
+    margin-left: -13.4em;
+  }
+}
+
+
+
+
+@media (max-width: 375px) {
+  .btn a {
+    margin-left: -16em;
+  }
+
+  .home-heading {
+    font-size: 1.8em;
+  }
+
+  .btn a {
+
+    padding: 6px;
+    width: 130px;
+    font-weight: 300;
+    font-size: small;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .btn a {
+    margin-left: -12em;
+  }
+
+  .home-heading {
+    font-size: 1.8em;
+  }
+
+  .btn a {
+
+    padding: 6px;
+    width: 130px;
+    font-weight: 300;
+    font-size: small;
+  }
+}
+
+
+@media (max-width: 280px) {
+  .btn a {
+    margin-left: -9em;
+  }
+}
+
+
+/* home section end */
+
+
+/* about section start */
+
+.about-section {
+  height: 92vh;
+  background-color: rgba(16, 16, 16, 1);
+}
+
+.about-heading {
+  color: white;
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+
+
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(16, 16, 16, 1);
+}
+
+.right-about-text {
+  margin-top: 110px;
+  margin-bottom: 40px;
+  flex-basis: 40%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+
+}
+
+.left-about-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 30%;
+  margin-bottom: 40px;
+  margin-top: 110px;
+}
+
+.left-about-img img {
+  width: 260px;
+}
+
+@media (max-width: 320px) {
+  .about-container {
+    overflow-x: hidden;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-heading {
+    font-size: larger;
+  }
+
+  .left-about-img img {
+    width: 150px;
+
+  }
+
+  .left-about-img {
+    margin-bottom: 0px;
+    flex-basis: 20%;
+  }
+
+  .right-about-text {
+    margin-bottom: 0px;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: small;
+    margin-top: 30px;
+
+
+  }
+
+}
+
+
+
+@media (max-width: 425px) {
+  .about-container {
+    overflow-x: hidden;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-heading {
+    font-size: x-large;
+  }
+
+  .left-about-img img {
+    width: 150px;
+
+  }
+
+  .left-about-img {
+    margin-bottom: 0px;
+    flex-basis: 15%;
+  }
+
+  .right-about-text {
+    margin-bottom: 40px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: small;
+    margin-top: 30px;
+
+
+  }
+
+}
+
+/* about section end */
